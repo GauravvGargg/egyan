@@ -1,0 +1,32 @@
+{% extends "stuparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Assignments   </h3>
+
+<div class="row g-3">
+    {% for s in smat %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>S No:</b>{{forloop.counter}}</h5>
+          <p class="mb-1"><b>Subject:</b> {{ s.subject }}</p>
+          <p class="mb-1"><b>Topic:</b> {{ s.filename }}</p>
+ <p class="text-center mt-3">
+          <a download href="{{s.myfile.url}}">
+                <button type="button" class="btn btn-success" onclick="return confirm('download a file')">Download</button>
+
+            </a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No records found.</div>
+    {% endfor %}
+
+</div>
+
+
+
+
+</div>
+{% endblock body %}

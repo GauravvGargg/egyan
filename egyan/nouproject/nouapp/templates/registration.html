@@ -1,0 +1,115 @@
+{% extends "parent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Student Registration Form   </h3>
+{% if msg %}
+<p style="text-align: center; color: #24d13b;">{{msg}}</p>
+{% endif %}
+<form method="post" class="p-4 rounded shadow bg-light w-75 mx-auto mt-4">
+  {% csrf_token %}
+
+  <!-- Roll No -->
+  <div class="mb-3">
+    <label for="rollno" class="form-label">Roll Number</label>
+    <input type="number" name="rollno" id="rollno" class="form-control" placeholder="Enter Roll No" required>
+  </div>
+
+  <!-- Name -->
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" required>
+  </div>
+
+  <!-- Father's Name -->
+  <div class="mb-3">
+    <label for="fname" class="form-label">Father's Name</label>
+    <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter Father's Name" required>
+  </div>
+
+  <!-- Mother's Name -->
+  <div class="mb-3">
+    <label for="mname" class="form-label">Mother's Name</label>
+    <input type="text" name="mname" id="mname" class="form-control" placeholder="Enter Mother's Name" required>
+  </div>
+
+  <!-- Gender -->
+  <div class="mb-3">
+    <label class="form-label d-block">Gender</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+      <label class="form-check-label" for="male">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+      <label class="form-check-label" for="female">Female</label>
+    </div>
+  </div>
+
+  <!-- Address -->
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <textarea name="address" id="address" class="form-control" placeholder="Enter your address here..." rows="3" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="program" class="form-label">Program</label>
+    <select name="program" id="program" class="form-select" required>
+      <option value="">-- Select Program --</option>
+      <option value="MCA">MCA</option>
+      <option value="BCA">BCA</option>
+      <option value="MTech">M.TECH</option>
+      <option value="BTech">B.TECH</option>
+    </select>
+  </div>
+
+  <!-- Branch -->
+  <div class="mb-3">
+    <label for="branch" class="form-label">Branch</label>
+    <select name="branch" id="branch" class="form-select" required>
+      <option value="">-- Select Branch --</option>
+      <option value="CA">Computer Application</option>
+      <option value="IT">Information Technology</option>
+      <option value="CS">Computer Science</option>
+    </select>
+  </div>
+
+  <!-- Year -->
+  <div class="mb-3">
+    <label for="year" class="form-label">Year</label>
+    <select name="year" id="year" class="form-select" required>
+      <option value="">-- Select Year --</option>
+      <option value="first">First Year</option>
+      <option value="second">Second Year</option>
+      <option value="third">Third Year</option>
+      <option value="final">Final Year</option>
+    </select>
+  </div>
+
+  <!-- Contact Number -->
+  <div class="mb-3">
+    <label for="contactno" class="form-label">Contact Number</label>
+    <input type="tel" name="contactno" id="contactno" class="form-control" placeholder="Enter Contact Number" required>
+  </div>
+
+  <!-- Email Address -->
+  <div class="mb-3">
+    <label for="emailaddress" class="form-label">Email Address</label>
+    <input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="Enter Email Address" required>
+  </div>
+
+  <!-- Password -->
+  <div class="mb-4">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required>
+  </div>
+
+  <!-- Buttons -->
+  <div class="text-center">
+    <button type="submit" class="btn btn-success me-2">Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+</form>
+
+
+</div>
+{% endblock body %}

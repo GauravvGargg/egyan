@@ -1,0 +1,37 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">View Material</h3>
+<div class="row g-3">
+    {% for s in smat %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>ID:</b>{{ s.mid }}</h5>
+          <p class="mb-1"><b>Program:</b> {{ s.program }}</p>
+          <p class="mb-1"><b>Baranch:</b> {{ s.branch }}</p>
+          <p class="mb-1"><b>Year:</b> {{ s.year }}</p>
+          <p class="mb-1"><b>Type:</b> {{ s.materialtype }}</p>
+          <p class="mb-0"><b>filename:</b>  <a download="" href="{{s.myfile.url}}">{{s.filename}} </a> (click to Downdoad)</p>
+          <p class="text-center mt-3">
+          <a href="{% url 'adminapp:deletesmat' mid=s.mid %}">
+                <button type="button" class="btn btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
+
+            </a>
+        
+</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No records found.</div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+</div>
+{% endblock body %}

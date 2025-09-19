@@ -1,0 +1,82 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Study Material Management</h3>
+
+<form method="post" enctype="multipart/form-data" class="p-4 rounded shadow bg-light text-dark  mx-auto mt-4">
+  {% if msg %}
+<p style="text-align: center; color: #6642e7;">{{msg}}</p>
+{% endif %}
+    {% csrf_token %}
+   <div class="mb-3">
+    <label for="program" class="form-label"><b>Select Program</b></label>
+    <select name="program" id="program" class="form-select" required>
+      <option value="">-- Select Program --</option>
+      <option value="MCA">MCA</option>
+      <option value="BCA">BCA</option>
+      <option value="MTech">M.TECH</option>
+      <option value="BTech">B.TECH</option>
+    </select>
+  </div>
+
+    <div class="mb-3">
+    <label for="branch" class="form-label"><b>Select Branch</b></label>
+    <select name="branch" id="branch" class="form-select" required>
+      <option value="">-- Select Branch --</option>
+      <option value="CA">Computer Application</option>
+      <option value="IT">Information Technology</option>
+      <option value="CS">Computer Science</option>
+    </select>
+  </div>
+
+   <div class="mb-3">
+    <label for="year" class="form-label"><b>Select Year</b></label>
+    <select name="year" id="year" class="form-select" required>
+      <option value="">-- Select Year --</option>
+      <option value="first">First Year</option>
+      <option value="second">Second Year</option>
+      <option value="third">Third Year</option>
+      <option value="final">Final Year</option>
+    </select>
+  </div>
+
+  
+     <div class="mb-3">
+    <label for="materialtype" class="form-label"><b>Select Material Type</b></label>
+     <select name="materialtype" id="materialtype" class="form-select" required>
+              <option value="">-- Select Type --</option>
+        <option value="assign">Assignment</option>
+        <option value="smat">Study Material</option>
+    </select>
+  </div>
+    <div class="mb-3">
+    <label for="subject" class="form-label"><b>Enter Subject Name</b></label>
+    <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subject Name" required/>
+</div>
+
+    <div class="mb-3">
+    <label for="filename" class="form-label"><b>Enter Topic Name</b></label>
+    <input type="text" name="filename" id="filename" class="form-control" placeholder="Enter Topic Name" required/></td>
+
+</div>
+
+<div class="mb-3">
+    <label for="myfile" class="form-label"><b>Select File to Upload</b></label>
+<input type="file" name="myfile" id="myfile" class="form-control"  required>
+
+
+
+</div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-success me-2">Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+
+</form>
+
+
+
+
+</div>
+{% endblock body %}

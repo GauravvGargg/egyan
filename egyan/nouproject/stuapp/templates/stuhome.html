@@ -1,0 +1,38 @@
+{% extends "stuparent.html" %}
+{% block body %}
+  {% load static %}
+
+<div class="row row-cols-1 row-cols-md-2 mt-3   g-4">
+  <div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 400px; height:250px; border-radius: 20px; margin-left: 75px;">
+      <a href="{% url 'stuapp:assignments' %}"><img src="{% static 'images/assign.jpg' %} " style="width: 400px; height:250px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 400px; height:250px; border-radius: 20px;">
+      <a href="{% url 'stuapp:studymaterial' %}"><img src="{% static 'images/Study.png' %}"style="width: 400px; height:250px; border-radius: 20px;" class="card-img-top" alt="Study Material"></a>
+      
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 400px; height:250px; margin-left: 75px; border-radius: 20px;">
+      <a href="{% url 'stuapp:response' %}"><img src="{% static 'images/response.jpg' %}" style="width: 400px; height:250px; border-radius: 20px;" class="card-img-top" alt="Responses"></a>
+     
+    </div>
+  </div>
+
+
+  <div class="col">
+    <div class="card text-center" data-aos="fade-right" style="width: 400px; height:250px; border-radius: 20px;">
+      <a href="{% url 'stuapp:changepassword' %}"><img src="{% static 'images/password.png' %}" style="width: 400px; height:250px; border-radius: 20px;" class="card-img-top" alt="Change Password"></a>
+   
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends "stuparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Submit Your Feedback/ Complaint</h3>
+
+<form method="post" class="p-4 rounded shadow bg-light text-dark w-75 mx-auto mt-4">
+  {% if msg %}
+<p style="text-align: center; color: #6642e7;">{{msg}}</p>
+{% endif %}
+    {% csrf_token %}
+ <div class="mb-3">
+    <label for="responsetype" class="form-label">Select Response Type</label>
+   <select name="responsetype" class="form-select">
+        <option value="feedback">Feedback</option>
+        <option value="complaint">Complaint</option>
+   </select>
+  </div>
+ <div class="mb-3">
+    <label for="responsetext" class="form-label">Response Text</label>
+    <textarea name="responsetext" id="responsetext" class="form-control" placeholder="Enter your Response here..." rows="3" required></textarea>
+  </div>
+
+    
+ <div class="text-center">
+    <button type="submit" class="btn btn-success me-2">Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+
+</form>
+
+
+</div>
+{% endblock body %}

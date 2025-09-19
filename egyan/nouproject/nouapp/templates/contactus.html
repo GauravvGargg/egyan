@@ -1,0 +1,50 @@
+{% extends "parent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Enquiry Form   </h3>
+
+<form action="{% url 'nouapp:saveenq' %}" method="post" class="p-4 rounded shadow bg-light w-75 mx-auto mt-4">
+  {% if msg %}
+<p style="text-align: center; color: #6642e7;">{{msg}}</p>
+{% endif %}
+    {% csrf_token %}
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" required>
+  </div>
+
+   <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <textarea name="address" id="address" class="form-control" placeholder="Enter your address here..." rows="3" required></textarea>
+  </div>
+
+   <div class="mb-3">
+    <label for="contactno" class="form-label">Contact Number</label>
+    <input type="tel" name="contactno" id="contactno" class="form-control" placeholder="Enter Contact Number" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="emailaddress" class="form-label">Email Address</label>
+    <input type="email" name="emailaddress" id="emailaddress" class="form-control" placeholder="Enter Email Address" required>
+  </div>
+
+ <div class="mb-3">
+    <label for="enquirytext" class="form-label">Address</label>
+    <textarea name="enquirytext" id="enquirytext" class="form-control" placeholder="Enter your enquirytext here..." rows="3" required></textarea>
+  </div>
+
+    
+ <div class="text-center">
+    <button type="submit" class="btn btn-success me-2">Submit</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </div>
+
+</form>
+
+
+
+
+
+
+</div>
+{% endblock body %}

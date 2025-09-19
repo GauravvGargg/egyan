@@ -1,0 +1,40 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Manage Feedback </h3>
+
+<div class="row g-3">
+    {% for f in feed %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>ID:</b>{{ f.id }}</h5>
+          <p class="mb-1"><b>Roll No:</b> {{ f.rollno }}</p>
+          <p class="mb-1"><b>Name:</b> {{ f.name }}</p>
+          <p class="mb-1"><b>Program:</b> {{ f.program }}</p>
+          <p class="mb-1"><b>Baranch:</b> {{ f.branch }}</p>
+          <p class="mb-1"><b>Year:</b> {{ f.year }}</p>
+          <p class="mb-1"><b>Feedback:</b> {{ f.responsetext }}</p>
+          <p class="text-center mt-3">
+            <a href="{% url 'adminapp:deletefeed' id=f.id %}">
+                <button type="button" class="btn btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
+
+            </a>
+        
+</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No records found.</div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+</div>
+{% endblock body %}

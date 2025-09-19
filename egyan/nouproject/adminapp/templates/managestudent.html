@@ -1,0 +1,25 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Student Management  </h3>
+<div class="row g-3">
+    {% for s in stu %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>Name:</b>{{ s.name }}</h5>
+          <p class="mb-1"><b>Roll No:</b> {{ s.rollno }}</p>
+          <p class="mb-1"><b>Program:</b> {{ s.program }}</p>
+          <p class="mb-1"><b>Baranch:</b> {{ s.branch }}</p>
+          <p class="mb-1"><b>Year:</b> {{ s.year }}</p>
+          <p class="mb-1"><b>Contact:</b> {{ s.contactno }}</p>
+          <p class="mb-0"><b>Email:</b> {{ s.emailaddress }}</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No student records found.</div>
+    {% endfor %}
+
+</div>
+{% endblock body %}

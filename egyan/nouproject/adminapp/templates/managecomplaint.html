@@ -1,0 +1,40 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Manage Complaint </h3>
+
+<div class="row g-3">
+    {% for c in comp %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>ID:</b>{{ c.id }}</h5>
+          <p class="mb-1"><b>Roll No:</b> {{ c.rollno }}</p>
+          <p class="mb-1"><b>Name:</b> {{ c.name }}</p>
+          <p class="mb-1"><b>Program:</b> {{ c.program }}</p>
+          <p class="mb-1"><b>Baranch:</b> {{ c.branch }}</p>
+          <p class="mb-1"><b>Year:</b> {{ c.year }}</p>
+          <p class="mb-1"><b>Complaint:</b> {{ c.responsetext }}</p>
+          <p class="text-center mt-3">
+            <a href="{% url 'adminapp:deletecomp' id=c.id %}">
+                <button type="button" class="btn btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
+
+            </a>
+        
+</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No records found.</div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+</div>
+{% endblock body %}

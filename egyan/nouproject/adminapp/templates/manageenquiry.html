@@ -1,0 +1,36 @@
+{% extends "adminparent.html" %}
+{% block body %}
+<div class="container mb-5 mt-3">
+<h3 style="color: #8b0000;">Enquiry Management   </h3>
+<div class="row g-3">
+    {% for e in enq %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100 border-start border-4 border-danger">
+        <div class="card-body">
+          <h5 class=""><b>ID:</b>{{ e.id }}</h5>
+          <p class="mb-1"><b>Name:</b> {{ e.name }}</p>
+          <p class="mb-1"><b>Address:</b> {{ e.address }}</p>
+          <p class="mb-1"><b>Contact No:</b> {{ e.contactno }}</p>
+          <p class="mb-1"><b>Enquiry Text:</b> {{ e.enquirytext }}</p>
+          <p class="text-center mt-3">
+                        <a href="{% url 'adminapp:deleteenq' id=e.id %}">
+                <button type="button" class="btn btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
+
+            </a>
+        
+</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center text-muted">No records found.</div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+</div>
+{% endblock body %}

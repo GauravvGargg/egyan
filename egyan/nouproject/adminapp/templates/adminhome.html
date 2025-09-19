@@ -1,0 +1,42 @@
+{% extends "adminparent.html" %}
+{% block body %}
+  {% load static %}
+
+<div class="row row-cols-1 row-cols-md-3 mt-2  g-4">
+<div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:managestudent' %}"><img src="{% static 'images/1.png' %} " style="width: 350px; height:220px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+    
+    </div>
+  </div>
+<div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:managestudymaterial' %}"><img src="{% static 'images/2.png' %} " style="width: 350px; height:220px; border-radius: 20px;"class="card-img-top" alt="Assignment"></a>
+    </div>
+  </div>
+<div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:viewmaterial' %}"><img src="{% static 'images/3.png' %} " style="width: 350px; height:220px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+      
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:manageenquiry' %}"><img src="{% static 'images/4.png' %} " style="width: 350px; height:220px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+      
+    </div>
+  </div>
+<div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:managecomplaint' %}"><img src="{% static 'images/5.png' %} " style="width: 350px; height:220px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+      
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-center" data-aos="fade-up" style="width: 350px; height:220px; border-radius: 20px;">
+      <a href="{% url 'adminapp:managefeedback' %}"><img src="{% static 'images/6.png' %} " style="width: 350px; height: 220px; border-radius: 20px;" class="card-img-top" alt="Assignment"></a>
+   
+    </div>
+  </div>
+</div>
+{% endblock body %}

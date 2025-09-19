@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOU e-Gyan PORTAL</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'images/logo.png' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<div class="container-fluid">
+  <!-- Top Header 1 -->
+  <div class="row  text-light py-2" data-aos="fade-down" style="background-color: #8b0000;">
+    <div class="col-sm-6 text-center">
+      <span class="small"><i class="fa-solid fa-phone "></i> +91 7080102007</span>
+      <span class="small ps-3"><i class="fa-solid fa-envelope"></i> nouegyanhelp@gmail.com</span>
+    </div>
+    <div class="col-sm-6 text-center">
+      <span class="small">Tue Jun 27 2025 12:20:34 GMT+05:30 (Indian Time)</span>
+    </div>
+  </div>
+
+  <!-- Top Header 2 -->
+  <div class="row  py-2 text-light border-topheader"  data-aos="fade-up" style="background-color: #8b0000;">
+    <div class="col-sm-12 text-center" >
+      <span class="small">
+        For Admission and Examination related query, Kindly call on University helpline Numbers 9341508580, 9341508577, 0612-2201013 & 0612-2206916
+      </span>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <div class="row align-items-center py-3">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1 logo-img text-center" data-aos="fade-right">
+      <a href="{% url 'nouapp:index' %}">
+        <img src="{% static 'images/logo.png' %}" height="100" alt="Logo">
+      </a>
+    </div>
+    <div class="col-sm-5" data-aos="fade-down">
+      <div class="ms-4 mt-2">
+        <h4 class="text-danger"><b>NOU e-Gyan PORTAL </b></h4>
+        <h6>(A Concept by Nalanda Open University)</h6>
+      </div>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-end" data-aos="zoom-in">
+      <div class="d-flex my-4 fs-4">
+        <a href="#" class="me-2"><i class="fa-brands fa-twitter text-info"></i></a>
+        <a href="#" class="me-2"><i class="fa-brands fa-facebook text-primary"></i></a>
+        <a href="#" class="me-2"><i class="fa-brands fa-instagram text-danger"></i></a>
+        <a href="#" class="me-2"><i class="fa-brands fa-linkedin text-info"></i></a>
+        <a href="#" class="me-2"><i class="fa-brands fa-youtube text-danger"></i></a>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <!-- Navbar -->
+
+
+  <div class="row" style="background-color: #636363;">
+  <nav class="navbar navbar-expand-lg"  data-aos="fade-up">
+    <div class="container-fluid">
+
+
+      
+      <div class="collapse navbar-collapse nav-tabs" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:index' %}"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:registration' %}"> <i class="fa-solid fa-user-plus "></i> Registration</a>
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:login' %}"> <i class="fa-solid fa-user "></i> Student Login</a>
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:adminlogin' %}"> <i class="fa-solid fa-building-columns "></i> University Login</a>
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:aboutus' %}"> <i class="fa-solid fa-gear "></i> Services</a>
+          <a class="nav-link text-white mx-3" href="{% url 'nouapp:contactus' %}"> <i class="fa-solid fa-message "></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <!-- Carousel -->
+  <div class="row">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-aos="zoom-in">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/slide1.jpg' %}" class="d-block w-100" height="400" alt="NOU Slide" >
+          <div class="carousel-caption d-none d-md-block text-end pe-5">
+            <h4>Get Educated</h4>
+            <h2 class="text-warning"><b>From Our Content</b></h2>
+            <h2 class="text-warning"><b>For Distance Learning</b></h2>
+            <h5 class="text-warning">NOU-e-Gyan PORTAL, CONCEPT BY NALANDA OPEN UNIVERSITY</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee Section -->
+  <div class="row" data-aos="fade-left">
+    <div class="col-sm-1 bg-danger text-white text-center py-3">
+      <i class="fa-solid fa-bullhorn fa-2x"></i>
+    </div>
+    <div class="col-sm-11 bg-light">
+      <div class="marquee-container">
+        <div class="marquee mt-3" style="font-size: 20px;">
+          <p class="ab-box">The portal is easy to access & highly user friendly for the students & study centres.</p>
+          <p class="ab-box">The portal is fully secured and accessible 24 x 7 to its authorised users.</p>
+          <p class="ab-box">The portal is easy to access & highly user friendly for the students & study centres.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="row">
+<div class="col-sm-12" style="min-height: 600px; background-image: url('{% static "images/bg.jpg" %}'); background-size: cover; background-position: center;" data-aos="fade-up">
+      {% block body %}
+      
+      {% endblock body %}
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="row text-white" style="background-color: #8b0000;">
+    <div class="col-sm-3 m-5 mt-4" data-aos="fade-up">
+      <img src="{% static 'images/logo.png' %}" height="80" alt="NOU Logo" />
+      <p>
+        Nalanda Open University is a State Open University duly established under the Act of Bihar Government and is also recognized by Distance Education Council, IGNOU, Maidan Garhi, New Delhi.
+      </p>
+    </div>
+    <div class="col-sm-2 m-4" data-aos="fade-up" data-aos-delay="100">
+      <h5>QUICK LINKS</h5>
+      <hr>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:index' %}">Home</a></p>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:aboutus' %}">Services</a></p>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:registration' %}">Registration</a></p>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:login' %}">Student Login</a></p>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:adminlogin' %}">University Login</a></p>
+<p><a class="nav-link text-white mx-3" href="{% url 'nouapp:contactus' %}">Contact Us</a></p>
+
+
+     
+    </div>
+    <div class="col-sm-2 mt-4" data-aos="fade-up" data-aos-delay="200">
+      <h5>Contact Us</h5>
+      <hr>
+      <h6>NOU</h6>
+      <p>2nd/3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 001 (BIHAR).</p>
+      <p><strong>+91 7080102007</strong></p>
+      <p>Give us a call</p>
+    </div>
+    <div class="col-sm-3 m-4" data-aos="fade-up" data-aos-delay="300">
+      <h5>Subscribe</h5>
+      <hr>
+      <p>Fill the detail below to receive the manual of the NOU e-Gyan Portal</p>
+      <div class="d-flex mt-3 mb-3">
+        <input type="text" class="form-control me-2" placeholder="Your email">
+        <button class="btn btn-warning"><i class="fa-brands fa-telegram"></i></button>
+      </div>
+      <div>
+        <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #ff0000;" href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center p-3 w-100" style="background-color: rgba(0, 0, 0, 0.05);">
+      <span class="float-start">© 2025 Nalanda Open University</span>
+      <span class="float-end me-5">Developed by Gaurav Garg</span>
+    </div>
+  </footer>
+</div>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

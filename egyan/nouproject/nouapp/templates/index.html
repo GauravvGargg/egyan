@@ -1,0 +1,249 @@
+{% extends "parent.html" %}
+{% block body %}
+  {% load static %}
+    <!-- about  start   -->
+     
+     <div class="row my-5" >
+      <div class="col-sm-1"></div>       <div class="col-sm-6 mx-auto" >
+            <h3 style="color: #8b0000;">About NOU e-Gyan Portal</h3>
+            <hr>
+           <p>
+           <strong>  Nalanda Open University </strong> welcomes all our students, faculties & study centres to the very new & innovative online study portal <strong>NOU e-Gyan</strong>. The portal is a unique initiative by Hon'ble Vice-Chancellor <strong>Prof. (Dr.) K C Sinha</strong>, which aims at providing online study material to the students of NOU.
+			 <br/><br/>
+			 The portal is accessible from any hook and corner of the world if the system allows the permission to its users. It is also fully secured and accessible 24 x 7 to its authorised users. It will resolve the academic issues such as E-content Distribution, Delivery, Tracking, Assessment, Progress Monitoring & Controlling of all stakeholders of the system i.e. students, teachers, study centre administrators as well as Nalanda Open University Admins when they are at a distance.
+            </p>
+        </div>
+        <div class=" col-sm-5 mt-4"  >
+        <iframe width="420" height="230" src="https://www.youtube.com/embed/jVl8uLz8f9w" title="About NOU e-Gyan Portal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </div>
+    <!-- about  end   -->
+
+ <!-- n1 start -->
+ <div class="row ms-1 " style=" color: white;" data-aos="zoom-out">
+
+
+    <div class="col-sm-3 text-center  p-5 " style="background-color: #ff0000;">
+        <i class="fa-solid fa-user-plus " style="font-size: 80px;  padding: 15px; border-radius: 5px;"></i>
+             <a href="{% url 'nouapp:registration' %}" ><h4 style="color: aliceblue;">REGISTRATION</h4></a>
+    </div>
+    <div class="col-sm-3 text-center p-5" style="background-color: #b10404;">
+        <i class="fa-solid fa-user" style="font-size: 80px;padding: 15px; border-radius: 5px;"></i>
+        <a href="{% url 'nouapp:login' %}"><h4 style="color: aliceblue;">STUDENT LOGIN</h4></a>
+    </div>
+    <div class="col-sm-3 text-center p-5" style="background-color: #980404;">
+        <i class="fa-solid fa-building-columns" style="font-size: 80px; color: yellow; padding: 15px; border-radius: 5px;"></i>
+        <a href="{% url 'nouapp:adminlogin' %}"><h4 style="color: aliceblue;">UNIVERSISITY LOGIN</h4></a>
+
+    </div>
+    <div class="col-sm-3 text-center p-5" style="background-color: #800404;">
+        <i class="fa-solid fa-phone "  style="font-size: 80px;  padding: 15px; border-radius: 5px;"></i>
+        <a href="{% url 'nouapp:contactus' %}"><h4 style="color: aliceblue;">CONTACT US</h4></a>
+
+    </div>
+
+  
+
+</div> 
+<!-- n1 end -->
+
+
+    
+       <!-- n2 start -->
+<div class="row">
+  <div class="col-sm-1"></div>
+  
+<div class="col-sm-10  mb-4 mt-4" data-aos="zoom-in">
+<h3 style="color: #8b0000;">Administrative Setup</h3>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-4 mt-5  ">
+  <div class="col" >
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/qq.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+        <h4>
+          Prof. (Dr.) K. C. Sinha
+</h4>
+<h6>VICE CHANCELLOR
+        </h>
+      </div>
+    </div>
+  </div>
+  <div class="col ">
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/vc.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+<h4>Prof. (Dr.) Sanjoy Kumar
+</h4>
+<h6>
+PRO VICE CHANCELLOR</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card " style="text-align: center;">
+      
+      <img src="{% static 'images/registrar.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+      <h4>Dr. Md. Habibur Rahman
+</h4>
+<h6>REGISTRAR</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="col ">
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/qqw.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+<h4>Dr. Neelam Kumari
+</h4>
+<h6>
+REGISTRAR (Exam)</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="col-sm-1 "></div>
+
+
+</div>
+<!-- n2 end  -->
+
+       <!-- n3 start -->
+<div class="row">
+  <div class="col-sm-1"></div>
+  
+<div class="col-sm-10  mb-4 mt-4">
+<h3 style="color: #8b0000;">Our Courses
+
+</h3>
+<hr>
+<marquee behavior="scroll" direction="left" scrollamount="2" >
+<div class="row row-cols-1 row-cols-md-4 mt-5  ">
+  <div class="col" >
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/mca.png' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+        <h4>
+Master In Computer <br> Application (M.C.A.)</h4>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col ">
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/bca.png' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+<h4>Bachelor in Computer <br>Application (BCA)
+</h4>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col ">
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/cid.png' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+<h4>Certification in <br>Interior Decoration
+</h4>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col ">
+    <div class="card " style="text-align: center;">
+      <img src="{% static 'images/bba.png' %}" class="card-img-top" alt="...">
+      <div class="card-body bg-body-tertiary">
+<h4>Bachelor in Business <br> Administration (BBA)
+</h4>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+  
+
+</marquee>
+
+</div>
+
+<div class="col-sm-1 "></div>
+
+
+</div>
+
+
+
+
+
+<!-- n3 end  -->
+
+
+ <!-- about  start   -->
+     
+     <div class="row my-5" data-aos="zoom-in">
+      <div class="col-sm-1"></div>     
+        <div class="col-sm-10 mx-auto" >
+            <h6 style="color: #494242;">How to use 
+            
+				  <h3 style="color:#8b0000; ">NOU <span >e</span>-Gyan Portal Tutorial Videos</h3></h6>
+          <hr>
+						<p><b>For any queries regarding the access into  the Portal, the users can watch the tutorial videos provided  or feel free to communicate their issues via the given contact helpline number or helpline email ID. </b></p>
+
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 text-center">
+                <iframe width="500" height="280" src="https://www.youtube.com/embed/Sh9VxOBoYbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<a href="#" class="btn btn-danger">How to login at NOU <span style="color:#fff;text-transform: lowercase;"></span>e-Gyan Portal</a>
+
+        </div>
+        <div class="col-sm-5 text-center">
+                <iframe width="500" height="280" src="https://www.youtube.com/embed/cEaTY8EfdRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="#" class="btn btn-danger">How to access content at NOU <span style="color:#fff;text-transform: lowercase;"></span>e-Gyan Portal</a>
+
+        </div>
+
+     </div>
+    <!-- about  end   -->
+
+ <!-- about  start   -->
+     
+     <div class="row my-5" data-aos="zoom-in">
+      <div class="col-sm-1"></div>     
+        <div class="col-sm-10 mx-auto" >
+            <h6 style="color: #494242;">Helpdesk
+            
+				  <h3 style="color:#8b0000; ">Always here to support you!</h3></h6>
+          <hr>
+
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 text-center bg-body-tertiary">
+          <img src="{% static 'images/helpline.svg' %}" alt="" height="350">
+        </div>
+        <div class="col-sm-5 text-center bg-body-tertiary">
+        <a href="#" class="btn btn-warning mt-3">The help desk provides user assistance to navigate and understand
+the aspects of the portal. This also provides a simple inteface for
+maintenance of student information and issues faced.</a>
+<a href="#" class="btn btn-light mt-3" style="width: 520px; height: 100px; "><h3 style="text-align: left; margin: 20px;"><i class="fa-solid fa-phone text-warning"></i> +91 70801 02007</h3></a><br>
+<a href="#" class="btn btn-light mt-3" style="width: 520px; height: 100px; "><h3 style="text-align: left; margin: 20px;"><i class="fa-solid fa-envelope text-warning"></i> nouegyanhelp@gmail.com</h3></a>
+        </div>
+
+     </div>
+    <!-- about  end   -->
+
+
+{% endblock body %}
